@@ -11,7 +11,7 @@ USING_NS_CC;
 
 class Player {
 private:
-    CCSprite* _player;
+    CCSprite* _playerSprite;
     CCNode*   _parent;
     CCSize    _screenSize;
 public:
@@ -20,7 +20,8 @@ public:
     
 public:
     bool Init(const CCPoint& startpoint);
-    bool StartRun();
-    bool Jump();
+    void IdleMotion();
+    void RunMotion();
+    void JumpMotion();
 
 };

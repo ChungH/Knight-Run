@@ -12,7 +12,7 @@ GameMain::GameMain()
 {
     _player = NULL;
     _winSize = CCDirector::sharedDirector()->getWinSize();
-    _jumpbutton = new JumpButton(this);
+    _jumpbutton = NULL;
 }
 
 GameMain::~GameMain()
@@ -56,9 +56,11 @@ bool GameMain::init()
     
     //코드추가
     _player = new Player(this);
+    _jumpbutton = new JumpButton(this, _player);
     CCPoint playerStartPoint(_winSize.width/8,_winSize.height/2);
     _player->Init(playerStartPoint);
     _jumpbutton->Init();
+    this->setTouchEnabled(true);
     return true;
 }
 
@@ -73,4 +75,19 @@ void GameMain::menuCloseCallback(CCObject* pSender)
 #endif
 #endif
     
+}
+
+
+
+void GameMain::ccTouchesBegan(CCSet* pTouches, CCEvent* pEvent)
+{
+    CCLog("1");
+}
+void GameMain::ccTouchesMoved(CCSet* pTouches, CCEvent* pEvent)
+{
+    CCLog("2");
+}
+void GameMain::ccTouchesEnded(CCSet* pTouches, CCEvent* pEvent)
+{
+    CCLog("3");
 }

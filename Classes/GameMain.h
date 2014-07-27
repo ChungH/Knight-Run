@@ -10,6 +10,7 @@
 #include "Player.h"
 #include "JumpButton.h"
 
+
 USING_NS_CC;
 
 class GameMain : public CCLayerColor
@@ -27,7 +28,11 @@ public:
     virtual bool init();
     static CCScene* scene();
     void menuCloseCallback(CCObject* pSender);
+    void JumpEvent();
     
+    void ccTouchesBegan(CCSet* pTouches, CCEvent* pEvent);
+    void ccTouchesMoved(CCSet* pTouches, CCEvent* pEvent);
+    void ccTouchesEnded(CCSet* pTouches, CCEvent* pEvent);
     
     CREATE_FUNC(GameMain);
 };

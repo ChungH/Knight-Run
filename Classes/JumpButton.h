@@ -15,11 +15,12 @@ class JumpButton
 {
 private:
     CCNode*   _parent;
-public:
-    JumpButton();
-    JumpButton(CCNode* parent);
+    Player*   _player;
     
+public:
+    JumpButton(CCNode* parent,Player* player);
     ~JumpButton();
+    
 public:
     void Init();
     void SelectedButton();
