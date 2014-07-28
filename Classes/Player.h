@@ -7,21 +7,34 @@
 //
 #pragma once
 #include "cocos2d.h"
+#include "Motion.h"
+
 USING_NS_CC;
 
-class Player {
+
+
+class Player{
+
 private:
-    CCSprite* _playerSprite;
-    CCNode*   _parent;
-    CCSize    _screenSize;
+    CCSprite*       _playerSprite;
+    CCNode*         _parent;
+    CCSize          _screenSize;
+    Motion*         _motion;
+
+    
+    int             _playerHP;
+    
 public:
     Player(CCNode* parent);
     ~Player();
     
 public:
     bool Init(const CCPoint& startpoint);
+    void JumpButtonSelected();
     void IdleMotion();
     void RunMotion();
     void JumpMotion();
+    void DeadMotion();
 
 };
+

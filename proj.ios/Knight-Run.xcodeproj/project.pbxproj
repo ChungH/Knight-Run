@@ -258,6 +258,7 @@
 		5A189C0919810D1D0046B4E5 /* JumpButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A189C0719810D1D0046B4E5 /* JumpButton.cpp */; };
 		5A189C0D19811E6D0046B4E5 /* JumpNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A189C0B19811E6D0046B4E5 /* JumpNormal.png */; };
 		5A189C0E19811E6D0046B4E5 /* JumpSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A189C0C19811E6D0046B4E5 /* JumpSelected.png */; };
+		5A39BF7F1986145E00ED2444 /* Motion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A39BF7D1986145E00ED2444 /* Motion.cpp */; };
 		7855E0E1153FEF240059DD9A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7855E0DF153FEF240059DD9A /* Default.png */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712461292920000B8313A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB212928DE900B8313A /* libxml2.dylib */; };
@@ -800,9 +801,11 @@
 		5A189C02198106F70046B4E5 /* BasicMon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BasicMon.cpp; path = ../Classes/BasicMon.cpp; sourceTree = "<group>"; };
 		5A189C03198106F70046B4E5 /* BasicMon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicMon.h; path = ../Classes/BasicMon.h; sourceTree = "<group>"; };
 		5A189C0719810D1D0046B4E5 /* JumpButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = JumpButton.cpp; path = ../Classes/JumpButton.cpp; sourceTree = "<group>"; };
-		5A189C0819810D1D0046B4E5 /* JumpButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JumpButton.h; path = ../Classes/JumpButton.h; sourceTree = "<group>"; };
+		5A189C0819810D1D0046B4E5 /* JumpButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JumpButton.h; path = ../Classes/JumpButton.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		5A189C0B19811E6D0046B4E5 /* JumpNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JumpNormal.png; sourceTree = "<group>"; };
 		5A189C0C19811E6D0046B4E5 /* JumpSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JumpSelected.png; sourceTree = "<group>"; };
+		5A39BF7D1986145E00ED2444 /* Motion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Motion.cpp; path = ../Classes/Motion.cpp; sourceTree = "<group>"; };
+		5A39BF7E1986145E00ED2444 /* Motion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Motion.h; path = ../Classes/Motion.h; sourceTree = "<group>"; };
 		7855E0DF153FEF240059DD9A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = SOURCE_ROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB212928DE900B8313A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -1947,6 +1950,8 @@
 			children = (
 				5A189BA2197CDC020046B4E5 /* Player.cpp */,
 				5A189BA3197CDC020046B4E5 /* Player.h */,
+				5A39BF801986146600ED2444 /* Motion */,
+				5A189C0619810CFE0046B4E5 /* TouchEvent */,
 			);
 			name = Player;
 			sourceTree = "<group>";
@@ -1965,7 +1970,6 @@
 			children = (
 				5A189BAB197CDE490046B4E5 /* GameMain.cpp */,
 				5A189BAC197CDE490046B4E5 /* GameMain.h */,
-				5A189C0619810CFE0046B4E5 /* TouchEvent */,
 				5A189BA5197CDC070046B4E5 /* Player */,
 				5A189BE81980F4470046B4E5 /* MonsterFactory */,
 			);
@@ -2036,6 +2040,15 @@
 				5A189C0819810D1D0046B4E5 /* JumpButton.h */,
 			);
 			name = JumpButton;
+			sourceTree = "<group>";
+		};
+		5A39BF801986146600ED2444 /* Motion */ = {
+			isa = PBXGroup;
+			children = (
+				5A39BF7D1986145E00ED2444 /* Motion.cpp */,
+				5A39BF7E1986145E00ED2444 /* Motion.h */,
+			);
+			name = Motion;
 			sourceTree = "<group>";
 		};
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
@@ -2216,6 +2229,7 @@
 				15A3D9261682F7D5002FB0C5 /* b2PulleyJoint.cpp in Sources */,
 				15A3D9271682F7D5002FB0C5 /* b2RevoluteJoint.cpp in Sources */,
 				15A3D9281682F7D5002FB0C5 /* b2RopeJoint.cpp in Sources */,
+				5A39BF7F1986145E00ED2444 /* Motion.cpp in Sources */,
 				15A3D9291682F7D5002FB0C5 /* b2WeldJoint.cpp in Sources */,
 				15A3D92A1682F7D5002FB0C5 /* b2WheelJoint.cpp in Sources */,
 				15A3D9391682F7D5002FB0C5 /* b2Rope.cpp in Sources */,

@@ -17,8 +17,9 @@ class GameMain : public CCLayerColor
 {
 private:
     Player*         _player;
+    JumpButton*      _jumpbutton;
     CCSize          _winSize;
-    JumpButton*     _jumpbutton;
+
     
 public:
     GameMain();

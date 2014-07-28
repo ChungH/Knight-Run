@@ -11,8 +11,8 @@
 GameMain::GameMain()
 {
     _player = NULL;
-    _winSize = CCDirector::sharedDirector()->getWinSize();
     _jumpbutton = NULL;
+    _winSize = CCDirector::sharedDirector()->getWinSize();
 }
 
 GameMain::~GameMain()
@@ -56,10 +56,10 @@ bool GameMain::init()
     
     //코드추가
     _player = new Player(this);
-    _jumpbutton = new JumpButton(this, _player);
+    _jumpbutton = new JumpButton(this,_player);
     CCPoint playerStartPoint(_winSize.width/8,_winSize.height/2);
     _player->Init(playerStartPoint);
-    _jumpbutton->Init();
+    this->addChild(_jumpbutton->Init());
     this->setTouchEnabled(true);
     return true;
 }

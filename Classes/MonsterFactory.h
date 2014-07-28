@@ -15,6 +15,6 @@ private:
     CCNode* _parent;
     
 public:
-    virtual bool init();
+    virtual void Init();
     
 };

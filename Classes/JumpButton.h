@@ -6,22 +6,23 @@
 //
 //
 #pragma once
+
 #include "cocos2d.h"
 #include "Player.h"
 
 USING_NS_CC;
 
+
 class JumpButton
 {
 private:
-    CCNode*   _parent;
-    Player*   _player;
-    
+    Player* _player;
+    CCMenu* _jumpbutton;
+    CCNode* _parent;
 public:
     JumpButton(CCNode* parent,Player* player);
     ~JumpButton();
-    
 public:
-    void Init();
-    void SelectedButton();
+    CCMenu* Init();
+    
 };
