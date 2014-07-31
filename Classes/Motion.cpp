@@ -17,7 +17,10 @@ Motion::Motion()
 }
 Motion::~Motion()
 {
-    
+    _idleMotion->release();
+    _runMotion->release();
+    _deadMotion->release();
+    _jumpMotion->release();
 }
 
 void Motion::Init()

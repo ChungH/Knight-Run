@@ -8,9 +8,8 @@
 
 #include "JumpButton.h"
 
-JumpButton::JumpButton(CCNode* parent, Player* player)
+JumpButton::JumpButton(Player* player)
 {
-    _parent = parent;
     _player = player;
 }
 

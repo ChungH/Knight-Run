@@ -259,6 +259,10 @@
 		5A189C0D19811E6D0046B4E5 /* JumpNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A189C0B19811E6D0046B4E5 /* JumpNormal.png */; };
 		5A189C0E19811E6D0046B4E5 /* JumpSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A189C0C19811E6D0046B4E5 /* JumpSelected.png */; };
 		5A39BF7F1986145E00ED2444 /* Motion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A39BF7D1986145E00ED2444 /* Motion.cpp */; };
+		5A5147E1198A0267006FC65B /* TouchManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A5147DF198A0267006FC65B /* TouchManager.cpp */; };
+		5A5147EB198A26F3006FC65B /* ThreeFingersDrag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A5147E9198A26F3006FC65B /* ThreeFingersDrag.cpp */; };
+		5A5147EF198A2709006FC65B /* TwoFingersDrag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A5147ED198A2709006FC65B /* TwoFingersDrag.cpp */; };
+		5A5147F3198A2723006FC65B /* OneFingerDrag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A5147F1198A2723006FC65B /* OneFingerDrag.cpp */; };
 		7855E0E1153FEF240059DD9A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7855E0DF153FEF240059DD9A /* Default.png */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712461292920000B8313A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB212928DE900B8313A /* libxml2.dylib */; };
@@ -806,6 +810,14 @@
 		5A189C0C19811E6D0046B4E5 /* JumpSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JumpSelected.png; sourceTree = "<group>"; };
 		5A39BF7D1986145E00ED2444 /* Motion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Motion.cpp; path = ../Classes/Motion.cpp; sourceTree = "<group>"; };
 		5A39BF7E1986145E00ED2444 /* Motion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Motion.h; path = ../Classes/Motion.h; sourceTree = "<group>"; };
+		5A5147DF198A0267006FC65B /* TouchManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TouchManager.cpp; path = ../Classes/TouchManager.cpp; sourceTree = "<group>"; };
+		5A5147E0198A0267006FC65B /* TouchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TouchManager.h; path = ../Classes/TouchManager.h; sourceTree = "<group>"; };
+		5A5147E9198A26F3006FC65B /* ThreeFingersDrag.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ThreeFingersDrag.cpp; path = ../Classes/ThreeFingersDrag.cpp; sourceTree = "<group>"; };
+		5A5147EA198A26F3006FC65B /* ThreeFingersDrag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThreeFingersDrag.h; path = ../Classes/ThreeFingersDrag.h; sourceTree = "<group>"; };
+		5A5147ED198A2709006FC65B /* TwoFingersDrag.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TwoFingersDrag.cpp; path = ../Classes/TwoFingersDrag.cpp; sourceTree = "<group>"; };
+		5A5147EE198A2709006FC65B /* TwoFingersDrag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwoFingersDrag.h; path = ../Classes/TwoFingersDrag.h; sourceTree = "<group>"; };
+		5A5147F1198A2723006FC65B /* OneFingerDrag.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OneFingerDrag.cpp; path = ../Classes/OneFingerDrag.cpp; sourceTree = "<group>"; };
+		5A5147F2198A2723006FC65B /* OneFingerDrag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OneFingerDrag.h; path = ../Classes/OneFingerDrag.h; sourceTree = "<group>"; };
 		7855E0DF153FEF240059DD9A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = SOURCE_ROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB212928DE900B8313A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -1951,7 +1963,6 @@
 				5A189BA2197CDC020046B4E5 /* Player.cpp */,
 				5A189BA3197CDC020046B4E5 /* Player.h */,
 				5A39BF801986146600ED2444 /* Motion */,
-				5A189C0619810CFE0046B4E5 /* TouchEvent */,
 			);
 			name = Player;
 			sourceTree = "<group>";
@@ -1970,6 +1981,7 @@
 			children = (
 				5A189BAB197CDE490046B4E5 /* GameMain.cpp */,
 				5A189BAC197CDE490046B4E5 /* GameMain.h */,
+				5A189C0619810CFE0046B4E5 /* TouchEvent */,
 				5A189BA5197CDC070046B4E5 /* Player */,
 				5A189BE81980F4470046B4E5 /* MonsterFactory */,
 			);
@@ -2029,6 +2041,7 @@
 			isa = PBXGroup;
 			children = (
 				5A189C0A19810D200046B4E5 /* JumpButton */,
+				5A5147E2198A0270006FC65B /* TouchManager */,
 			);
 			name = TouchEvent;
 			sourceTree = "<group>";
@@ -2049,6 +2062,53 @@
 				5A39BF7E1986145E00ED2444 /* Motion.h */,
 			);
 			name = Motion;
+			sourceTree = "<group>";
+		};
+		5A5147E2198A0270006FC65B /* TouchManager */ = {
+			isa = PBXGroup;
+			children = (
+				5A5147DF198A0267006FC65B /* TouchManager.cpp */,
+				5A5147E0198A0267006FC65B /* TouchManager.h */,
+				5A5147E8198A26D9006FC65B /* TouchEvent */,
+			);
+			name = TouchManager;
+			sourceTree = "<group>";
+		};
+		5A5147E8198A26D9006FC65B /* TouchEvent */ = {
+			isa = PBXGroup;
+			children = (
+				5A5147F4198A2727006FC65B /* OneFingerDrag */,
+				5A5147F0198A2711006FC65B /* TwoFingersDrag */,
+				5A5147EC198A26FC006FC65B /* ThreeFingerDrag */,
+			);
+			name = TouchEvent;
+			sourceTree = "<group>";
+		};
+		5A5147EC198A26FC006FC65B /* ThreeFingerDrag */ = {
+			isa = PBXGroup;
+			children = (
+				5A5147E9198A26F3006FC65B /* ThreeFingersDrag.cpp */,
+				5A5147EA198A26F3006FC65B /* ThreeFingersDrag.h */,
+			);
+			name = ThreeFingerDrag;
+			sourceTree = "<group>";
+		};
+		5A5147F0198A2711006FC65B /* TwoFingersDrag */ = {
+			isa = PBXGroup;
+			children = (
+				5A5147ED198A2709006FC65B /* TwoFingersDrag.cpp */,
+				5A5147EE198A2709006FC65B /* TwoFingersDrag.h */,
+			);
+			name = TwoFingersDrag;
+			sourceTree = "<group>";
+		};
+		5A5147F4198A2727006FC65B /* OneFingerDrag */ = {
+			isa = PBXGroup;
+			children = (
+				5A5147F1198A2723006FC65B /* OneFingerDrag.cpp */,
+				5A5147F2198A2723006FC65B /* OneFingerDrag.h */,
+			);
+			name = OneFingerDrag;
 			sourceTree = "<group>";
 		};
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
@@ -2230,9 +2290,11 @@
 				15A3D9271682F7D5002FB0C5 /* b2RevoluteJoint.cpp in Sources */,
 				15A3D9281682F7D5002FB0C5 /* b2RopeJoint.cpp in Sources */,
 				5A39BF7F1986145E00ED2444 /* Motion.cpp in Sources */,
+				5A5147EF198A2709006FC65B /* TwoFingersDrag.cpp in Sources */,
 				15A3D9291682F7D5002FB0C5 /* b2WeldJoint.cpp in Sources */,
 				15A3D92A1682F7D5002FB0C5 /* b2WheelJoint.cpp in Sources */,
 				15A3D9391682F7D5002FB0C5 /* b2Rope.cpp in Sources */,
+				5A5147EB198A26F3006FC65B /* ThreeFingersDrag.cpp in Sources */,
 				15A3D9951682F7F9002FB0C5 /* chipmunk.c in Sources */,
 				15A3D9971682F7F9002FB0C5 /* cpConstraint.c in Sources */,
 				15A3D9981682F7F9002FB0C5 /* cpDampedRotarySpring.c in Sources */,
@@ -2322,6 +2384,7 @@
 				15A3DA5E1682F826002FB0C5 /* CCPhysicsDebugNode.cpp in Sources */,
 				375BD5131868454E0024609E /* CCActionObject.cpp in Sources */,
 				15A3DA5F1682F826002FB0C5 /* CCPhysicsSprite.cpp in Sources */,
+				5A5147E1198A0267006FC65B /* TouchManager.cpp in Sources */,
 				15A3DAEB1682F8A6002FB0C5 /* CDAudioManager.m in Sources */,
 				15A3DAEC1682F8A6002FB0C5 /* CDOpenALSupport.m in Sources */,
 				15A3DAED1682F8A6002FB0C5 /* CocosDenshion.m in Sources */,
@@ -2398,6 +2461,7 @@
 				379BB9BE17F03F3700829B88 /* UIPageView.cpp in Sources */,
 				379BB9BF17F03F3700829B88 /* UIScrollView.cpp in Sources */,
 				379BB9C017F03F3700829B88 /* UIButton.cpp in Sources */,
+				5A5147F3198A2723006FC65B /* OneFingerDrag.cpp in Sources */,
 				375BD50E1868454E0024609E /* CCActionEaseEx.cpp in Sources */,
 				379BB9C117F03F3700829B88 /* UICheckBox.cpp in Sources */,
 				379BB9C217F03F3700829B88 /* UIImageView.cpp in Sources */,

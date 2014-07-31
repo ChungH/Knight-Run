@@ -10,8 +10,9 @@
 
 GameMain::GameMain()
 {
-    _player = NULL;
-    _jumpbutton = NULL;
+    _player = new Player(this);
+    _jumpbutton = new JumpButton(_player);
+    _touchManager = new TouchManager();
     _winSize = CCDirector::sharedDirector()->getWinSize();
 }
 
@@ -55,8 +56,7 @@ bool GameMain::init()
     this->addChild(pMenu, 1);
     
     //코드추가
-    _player = new Player(this);
-    _jumpbutton = new JumpButton(this,_player);
+
     CCPoint playerStartPoint(_winSize.width/8,_winSize.height/2);
     _player->Init(playerStartPoint);
     this->addChild(_jumpbutton->Init());
@@ -76,18 +76,34 @@ void GameMain::menuCloseCallback(CCObject* pSender)
 #endif
     
 }
-
-
+void GameMain::registerWithTouchDispatcher(void)
+{
+    CCDirector* director = CCDirector::sharedDirector();
+    director->getTouchDispatcher()->addStandardDelegate(this,0);
+}
 
 void GameMain::ccTouchesBegan(CCSet* pTouches, CCEvent* pEvent)
 {
+    TouchCheckEnable = Disable;
+    CCSetIterator touchIter = pTouches->begin();
+    CCTouch* touch = (CCTouch*)(*touchIter);
+    CCPoint tmpPoint = touch->getLocation();
+    _touchManager->AddtoTouchBegan(tmpPoint);
     CCLog("1");
+    CCLog("%f %f",tmpPoint.x,tmpPoint.y);
 }
 void GameMain::ccTouchesMoved(CCSet* pTouches, CCEvent* pEvent)
 {
-    CCLog("2");
+    TouchCheckEnable = Disable;
+//    CCLog("2");
 }
 void GameMain::ccTouchesEnded(CCSet* pTouches, CCEvent* pEvent)
 {
+    TouchCheckEnable = Enable;
+    CCSetIterator touchIter = pTouches->begin();
+    CCTouch* touch = (CCTouch*)(*touchIter);
+    CCPoint tmpPoint = touch->getLocation();
+    _touchManager->AddtoTouchEnded(tmpPoint);
     CCLog("3");
+    CCLog("%f %f",tmpPoint.x,tmpPoint.y);
 }

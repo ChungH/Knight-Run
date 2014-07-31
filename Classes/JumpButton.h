@@ -18,9 +18,9 @@ class JumpButton
 private:
     Player* _player;
     CCMenu* _jumpbutton;
-    CCNode* _parent;
+    
 public:
-    JumpButton(CCNode* parent,Player* player);
+    JumpButton(Player* player);
     ~JumpButton();
 public:
     CCMenu* Init();
